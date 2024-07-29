@@ -5,7 +5,7 @@ const Locations = () => {
   return (<>
     <div className='mt-10 text-center text-5xl'>Locations</div>
     <div className='m-4 flex justify-center'>
-    <APIProvider apiKey={'AIzaSyANKJ9qLrMQJiRtJ-x5TunwakDPq71NJxU'}>
+    <APIProvider apiKey={''}>
     <Map
       style={{width: '50vw', height: '50vh'}}
       defaultCenter={{lat: 51.5072, lng: 0.1276}}
