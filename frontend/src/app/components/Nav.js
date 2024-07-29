@@ -62,8 +62,8 @@ const Nav = () => {
         </div>
     </div>
     {path == '/' ? <div className={'flex justify-center m-10 text-white'}>
-        <Button onClick={()=> window.scrollTo({top:2000, behavior:'smooth'})}  children='Rent A Car'/>
-        <Button onClick={()=> window.scrollTo({top:2300, behavior:'smooth'})}  children='Locations'/>
+        <Button onClick={()=> window.scrollTo({top:1600, behavior:'smooth'})}  children='Rent A Car'/>
+        <Button onClick={()=> window.scrollTo({top:2000, behavior:'smooth'})}  children='Locations'/>
         <Button onClick={()=> window.scrollTo({top:3000, behavior:'smooth'})}  children='FAQs'/>
     </div> : (path == '/myportal' && user) ? <div className={'flex justify-center m-10 text-white'}>
         <Button onClick={()=> window.scrollTo({top:2000, behavior:'smooth'})}  children='Bookings'/>
