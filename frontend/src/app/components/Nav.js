@@ -40,7 +40,7 @@ const Nav = () => {
               height={24}
               priority
               />
-              </a> :
+              </a> : path != '/signin' ?
               <a className='ml-10 mt-4' href='signin'>Log in with Google
         <Image
               src="/person.svg"
@@ -50,7 +50,7 @@ const Nav = () => {
               height={24}
               priority
               />
-        </a>}
+        </a> : ''}
             </div>
             <div className='tire tread mr-auto ml-4'>
         <a className=' ml-20' href='/'>

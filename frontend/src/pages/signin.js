@@ -5,6 +5,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // import { useNavigate } from 'react-router-dom';
 import { useRouter } from "next/navigation";
+import Nav from '@/app/components/Nav';
+import '../app/globals.css'
 
 const SignIn = () => {
     const [user, loading] = useAuthState(auth)
@@ -33,16 +35,14 @@ const SignIn = () => {
         }})
 
   return (
-    <div className="shadow-xl mt-32 p-10 text-gray-700 rounded-lg">
-      <h2 className="text-6xl font-medium mb-3 text-center">Rental</h2>
-    <h2 className="text-3xl font-medium">Join today</h2>
+    <div className="shadow-xl p-10 text-gray-700 rounded-lg">
+      <Nav></Nav>
+    <h2 className="text-3xl mt-10 font-medium">Join/Sign in</h2>
     <div className="py-4">
-      <h3 className="py-4">Sign in</h3>
-      
       <div className="flex flex-col gap-4">
         <button
           onClick={googleSignIn}
-          className="text-white bg-gray-700 p-4 w-full font-medium rounded-lg flex align-middle gap-2 "
+          className="text-white bg-gray-700 p-4 font-medium rounded-lg flex align-middle gap-2 "
         >
           <FcGoogle className="text-2xl" />
           Sign in with Google

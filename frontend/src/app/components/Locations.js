@@ -5,11 +5,11 @@ const Locations = () => {
   return (<>
     <div className='mt-10 text-center text-5xl'>Locations</div>
     <div className='m-4 flex justify-center'>
-    <APIProvider apiKey={'AIzaSyDZK7RjrTuTCnmt67LXvWnrca7a62H9POo'}>
+    <APIProvider apiKey={'AIzaSyANKJ9qLrMQJiRtJ-x5TunwakDPq71NJxU'}>
     <Map
       style={{width: '50vw', height: '50vh'}}
-      defaultCenter={{lat: 22.54992, lng: 0}}
-      defaultZoom={4}
+      defaultCenter={{lat: 51.5072, lng: 0.1276}}
+      defaultZoom={9}
       gestureHandling={'greedy'}
       disableDefaultUI={true}
       />
