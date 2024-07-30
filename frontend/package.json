@@ -19,6 +19,7 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.0-alpha3",
     "debug": "^4.3.6",
+    "dynamic": "^4.2.2",
     "easy-peasy": "^6.0.5",
     "firebase": "^10.12.4",
     "next": "^13.4.1",

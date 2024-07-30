@@ -5,14 +5,22 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase.config";
 import { usePathname } from "next/navigation";
 import { signOut } from 'firebase/auth'
+import { useRouter } from "next/navigation";
+
+// import dynamic from 'next/dynamic'
+ 
+// const NoSSR = dynamic(() => import('../components/no-ssr'), { ssr: false })
 
 
 
 
-const Nav = () => {
+const Nav =() => {
   // const router = useRouter()
   const path = usePathname()
-  const [user, loading] = useAuthState(auth)
+  const router = useRouter();
+
+    const [user, loading] = useAuthState(auth)
+
   
   return (<>
 
@@ -31,7 +39,7 @@ const Nav = () => {
         </a> }
         </div>
         <div className='mr-4'>
-        {user ? <a className='ml-10 mt-4' href='/' onClick={()=>signOut(auth)}> Sign Out
+        {user ? <a className='ml-10 mt-4' href='/' onClick={()=>{signOut(auth); router.push('/')} }> Sign Out
         <Image
               src="/person.svg"
               alt="Person Logo"
@@ -50,8 +58,9 @@ const Nav = () => {
               height={24}
               priority
               />
-        </a> : ''}
+        </a> : null}
             </div>
+
             <div className='tire tread mr-auto ml-4'>
         <a className=' ml-20' href='/'>
         <Image src="/carrentallogo.png"

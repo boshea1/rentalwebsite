@@ -18,12 +18,10 @@ const myportal = () => {
         <>
         <div className='ml-10 mt-10'>
           <h1>{user?'Logged In': 'Logged Out'}</h1>
-          <Button children='Bookings'/>
-          <Button children='Details'/>
-          <Button children='points'/>
-        {/* <h1>My Bookings</h1>
+         
+        <h1>My Bookings</h1>
         <h1>Account Details</h1>
-        <h1>Loyalty points</h1> */}
+        <h1>Loyalty points</h1>
         </div>
         </>
       }
